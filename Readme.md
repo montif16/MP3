@@ -47,3 +47,4 @@ We applied KMeans clustering with k = 2…10 and evaluated with silhouette score
 - Since the scores are low (<0.25), this indicates the dataset does not separate cleanly into clusters — employees are quite diverse and overlap in their characteristics.
 
 **Conclusion:** While clustering can segment employees into two broad groups, the low silhouette scores suggest that clustering is not very meaningful for this dataset.
+

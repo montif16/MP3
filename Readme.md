@@ -48,3 +48,45 @@ We applied KMeans clustering with k = 2…10 and evaluated with silhouette score
 
 **Conclusion:** While clustering can segment employees into two broad groups, the low silhouette scores suggest that clustering is not very meaningful for this dataset.
 
+# -------- 6) Step 6 Answering questions  ----------
+
+### Q1 – Why do people quit?
+People are more likely to quit when they are **underpaid, overworked, or early in their career**. Long commutes and overtime further increase attrition risk.  
+
+### Q2 – Which positions/departments are most at risk?
+Lower-level roles and sales-related positions are more prone to attrition, while senior roles with higher pay are less risky.  
+
+### Q3 – Do men and women get paid equally in all departments?
+Regression results (Step 2) showed salaries are almost entirely explained by job role and level, not by gender.  
+**Conclusion:** No strong evidence of systematic pay gap by gender.  
+
+### Q4 – Does family status or distance from work affect work-life balance?
+Marital status and commute distance were included, but neither stood out in the models.  
+**Conclusion:** They may affect individuals, but not overall work-life balance patterns.  
+
+### Q5 – Does education affect job satisfaction?
+Education level showed little relationship with job satisfaction.  
+**Conclusion:** Satisfaction depends more on role, pay, and management than education.  
+
+### Q6 – Which ML methods did you apply and why?
+- Linear Regression → for income prediction (numeric target).  
+- Logistic Regression → for attrition classification (binary target).  
+- Logistic Regression with weights → to handle imbalance.  
+- KMeans → for unsupervised clustering and employee segmentation.  
+
+### Q7 – How accurate are your models?
+- Regression: R² = 0.938, RMSE = 1167 → very accurate.  
+- Classification baseline: Accuracy 86%, Recall for quitters 0.34 → weak on attrition.  
+- Classification balanced: Accuracy 76%, Recall for quitters 0.64 → better for HR.  
+- Clustering: Best silhouette = 0.114 → weak clustering.  
+
+### Q8 – How could the models be improved?
+- Regression: already strong.  
+- Classification: improve with oversampling, threshold tuning, or non-linear models
+- Clustering: improve with feature engineering or dimensionality reduction .  
+
+### Q9 – What challenges did you face?
+- Class imbalance made attrition prediction difficult.  
+- High accuracy was misleading until recall was analyzed.  
+- Clustering gave poor results (weak natural groups).  
+- Dataset issues (mislabelled file extension) and environment setup caused extra work.  
